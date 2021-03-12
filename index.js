@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 3001;
 // Middlewares
 app.use(express.json());
 app.use(cors());
+app.use(express.static("build"));
 // app.use(morgan_middleware);
 
 // Routes
@@ -75,5 +76,5 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port http://localhost:${PORT}/`);
 });
