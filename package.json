@@ -17,7 +17,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "build:ui": "rm -rf build && cd ../front/ && yarn run build --prod && cp -r build ../excercises",
-    "deploy": "git push heroku master",
+    "deploy": "git push heroku main",
     "deploy:full": "yarn run build:ui && git add . && git commit -m uibuild && git push && yarn run deploy",
     "logs:prod": "heroku logs --tail"
   }
